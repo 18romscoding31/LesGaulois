@@ -8,5 +8,8 @@ public class TestGaulois {
 		Gaulois Asterix = new Gaulois("Asterix", 8);
 		Gaulois Obelix = new Gaulois("Obelix", 16);
 		
+		Asterix.parler("Bonjour Obélix");
+		Obelix.parler("Bonjour Astérix. Ca te dirais d'aller chasser des sangliers ?");
+		Asterix.parler("Oui très bonne idée.");
 	}
 }	
