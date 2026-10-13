@@ -2,6 +2,7 @@ package Personnages;
 public class Gaulois {
 	private String nom;
 	private int force;
+	private int effetPotion = 1;
 
 	public Gaulois(String nom, int force) {
 		this.nom = nom;
@@ -22,6 +23,29 @@ public class Gaulois {
 	
 	public static void main(String[] args) {
 		Gaulois Asterix = new Gaulois("Astérix", 8);
-		
+		System.out.println(Asterix);
 	}
+
+	@Override
+	public String toString() {
+		return nom;
+	}
+	public void frapper(Romain romain) {
+		String nomRomain = romain.getNom();
+		System.out.println(nom + " envoie un grand coup dans la mâchoire de "
+				+ nomRomain);
+		int forceCoup = this.force * this.effetPotion;
+		forceCoup = this.force/3;
+		romain.recevoirCoup(forceCoup);
+		effetPotion--;
+		if (effetPotion < 1) {
+			effetPotion = 1;
+			System.out.println("effet de la potion = 1");
+		}
+		}
+	
+	public void boirePotion(int forcePotion) {
+		this.effetPotion = forcePotion;
+	}
+
 }
