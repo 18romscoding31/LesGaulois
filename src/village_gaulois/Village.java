@@ -65,6 +65,5 @@ public class Village {
 		Abraracourcix.sePresenter();
 		Astérix.sePresenter();
 		Doublepolémix.sePresenter();
-		
 	}
 }
